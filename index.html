@@ -3,116 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIMASI UNIPDU - Beranda</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Selamat Datang - HIMASI UNIPDU</title>
+    <link rel="stylesheet" href="style/style.css"> 
+    
+    <style>
+        .welcome-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            color: #fff;
+            padding: 20px;
+
+            /* --- PROPERTI BACKGROUND IMAGE BARU --- */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.781)), url('img/Background/Welcome2.JPG');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .welcome-screen h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .welcome-screen p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .welcome-screen .enter-button {
+            background-color: #030067; /* Warna Aksen */
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        .welcome-screen .enter-button:hover {
+            color: black;
+            background-color: #10f4e3;
+        }
+        /* Opsional: Untuk membuat logo dan teks di atas background */
+        .welcome-screen > * {
+            z-index: 1; 
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            
-            <a href="#" class="logo" ><img src="img/Logo Himasi.png" alt="logo" width="30px" height="30px"> HIMASI UNIPDU</a>
-            
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="pages/profil.html">Profil</a></li>
-                    <li><a href="pages/divisi.html">Divisi</a></li>
-                    <li><a href="pages/galeri.html">Galeri</a></li>
-                    <li><a href="pages/kontak.html">Kontak</a></li>
-                </ul>
-            </nav>
-            <button class="hamburger" id="hamburger-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <div class="mobile-menu" id="mobile-menu">
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="pages/profil.html">Profil</a></li>
-            <li><a href="pages/divisi.html">Divisi</a></li>
-            <li><a href="pages/galeri.html">Galeri</a></li>
-            <li><a href="pages/kontak.html">Kontak</a></li>
-        </ul>
+    <div class="welcome-screen">
+        <img src="img/Logo Himasi.png" alt="Logo HIMASI" width="250">
+        <h1>Selamat Datang di HIMASI UNIPDU</h1>
+        <p>Himpunan Mahasiswa Sistem Informasi</p>
+        <a href="pages/beranda.html" class="enter-button">Masuk ke Website</a>
     </div>
 
-    <section class="hero" id="hero-slideshow">
-        <div class="slideshow-container">
-            <img class="hero-slide active" src="img/Background/Foto BG1.JPG" alt="Slide 1">
-            <img class="hero-slide" src="img/Background/Foto BG2.JPG" alt="Slide 2">
-        </div>
-
-        <div class="container hero-content">
-            <h1>Selamat Datang di Website Resmi</h1>
-            <h2>Himpunan Mahasiswa Sistem Informasi (HIMASI) UNIPDU</h2>
-            <p>Wadah aspirasi dan kreativitas mahasiswa Sistem Informasi.</p>
-        </div>
-    </section>
-
-    <main class="container content">
-        
-        <section class="page-section" id="tentang">
-            <h3>Tentang Kami</h3>
-            <p>HIMASI (Himpunan Mahasiswa Sistem Informasi) UNIPDU Jombang adalah organisasi kemahasiswaan di bawah naungan Program Studi Sistem Informasi. Organisasi ini bertugas membantu mahasiswa Sistem Informasi untuk mengembangkan kemampuan dan pengetaahuan akademik.</p>
-        </section>
-
-        <section class="page-section" id="visi-misi">
-            <h3>Visi & Misi</h3>
-            <div class="columns">
-                <div class="column">
-                    <h4>Visi</h4>
-                    <p>Mewujudkan himasi sebagai organisasi yang berkontribusi terhadap kualitas akademik mahasiswa dan mewadahi minat bakat mahasiswa Sistem Informasi.</p>
-                </div>
-                <div class="column">
-                    <h4>Misi</h4>
-                    <ul>
-                        <li>Menjalin Komunikasi secara intens terhadap mahasiswa Fakultas Saintek.</li>
-                        <li>Mengembangkan program kerja berbasis pelatihan, seminar yang dibutuhkan mahasiswa Sistem Informasi.</li>
-                        <li>Membuat kelas kelas belajar yang sesuai kebutuhan mahasiswa Sistem Informasi.</li>
-                        <li>Membangun jaringan kerja antar himpunan luar untuk memperluas relasi informasi informasi lomba diluar kampus</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="page-section" id="berita">
-            <h3>Berita Terbaru</h3>
-            <div class="card-grid">
-                <article class="card">
-                    <img src="https://via.placeholder.com/300x150?text=Gambar+Berita+1" alt="Berita 1">
-                    <div class="card-content">
-                        <h4>Judul Berita Pertama</h4>
-                        <p>Deskripsi singkat dari berita atau kegiatan yang telah dilaksanakan...</p>
-                        <a href="#" class="btn-readmore">Baca Selengkapnya</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="https://via.placeholder.com/300x150?text=Gambar+Berita+2" alt="Berita 2">
-                    <div class="card-content">
-                        <h4>Judul Berita Kedua</h4>
-                        <p>Deskripsi singkat dari berita atau kegiatan yang telah dilaksanakan...</p>
-                        <a href="#" class="btn-readmore">Baca Selengkapnya</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 HIMASI UNIPDU. Hak Cipta Dilindungi.</p>
-            <div class="social-media">
-                <a href="#">Email</a> | 
-                <a href="#">Instagram</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="/script/script.js"></script>
 </body>
 </html>
