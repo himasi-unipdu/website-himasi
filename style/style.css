@@ -223,6 +223,14 @@ body {
     padding-bottom: 10px;
 }
 
+.page-section p {
+    text-align: center;
+}
+
+.page-section p.align-left{
+    text-align: left;
+}
+
 /* 6. Layout Kolom (Visi Misi) */
 .columns {
     display: flex;
