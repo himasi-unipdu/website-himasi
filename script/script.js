@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let slideIndex = 0;
         const slides = document.querySelectorAll('.hero-slide');
         
-        // Durasi slide Anda (3000ms = 3 detik)
+        // Durasi slide Anda (3000ms)
         const slideDuration = 3000; 
         
-        // Durasi animasi CSS (1200ms = 1.2 detik, harus SAMA dengan CSS)
-        const animationDuration = 1200; 
+        // Durasi animasi CSS (1000ms)
+        const animationDuration = 1000; 
 
         if (slides.length === 0) return; // Hentikan jika tidak ada gambar
 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (nextSlide) {
                     nextSlide.classList.add('active');
                 }
-            }, 50); // Jeda singkat
+            }, 0); // Jeda singkat
 
             // 6. Ulangi
             setTimeout(showNextSlide, slideDuration);
@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // --- Kumpulan Detail Anggota ---
 
+            // Badan Pengurus Harian
             if (card.id === 'member-ainur') {
                 detailText = "Ainur Rohman Hardini menjabat sebagai Ketua Umum HIMASI periode ini. Bertanggung jawab atas kepemimpinan dan koordinasi seluruh kegiatan organisasi. <br>Angkatan 2023.";
             } else if (card.id === 'member-dio') {
